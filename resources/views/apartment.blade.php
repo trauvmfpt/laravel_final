@@ -16,7 +16,15 @@
         <div class="text-muted">Sweet Home</div>
     </div>
     <div class="row">
-
+        <nav class="navbar navbar-default">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Best Home</a></li>
+                <li><a href="#">Life style</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
     </div>
 </div>
 <div class="container-fluid">
