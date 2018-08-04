@@ -20,16 +20,16 @@
     </div>
 </div>
 <div class="container-fluid">
-    <ul>
         @foreach($list_obj as $item)
-            <li>
-                <a href="/admin/article/{{$item -> id}}">{{$item -> name}}</a>
-                <img src="{{$item -> images}}" alt="" style="width: 100px; border-radius: 50%">
-                <a href="/admin/article/{{$item -> id}}/edit">Edit</a>&nbsp;&nbsp;
-                <span class="btn-delete" id="{{$item-> id}}">Delete With Ajax</span>
-            </li>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{$item -> images}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{$item -> name}}</h5>
+                    <p class="card-text">Price: {{$item -> price}}</p>
+                    <p class="card-text">{{$item -> detail}}</p>
+                </div>
+            </div>
         @endforeach
-    </ul>
 </div>
 
 <!-- Optional JavaScript -->
