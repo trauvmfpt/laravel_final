@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('apartments', \App\Http\Controllers\ApartmentController::class);
+Route::resource('apartment', 'ApartmentController');

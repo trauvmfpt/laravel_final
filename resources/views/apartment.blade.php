@@ -5,6 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <script src="{{asset('js/app.js')}}"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
           integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <title>Apartments</title>
@@ -17,19 +19,19 @@
     </div>
     <div class="row">
         <nav class="navbar navbar-default">
-            <ul class="nav navbar-nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Best Home</a></li>
-                <li><a href="#">Life style</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact us</a></li>
-            </ul>
+            <a href="#">Home | </a>
+            <a href="#"> Best Home | </a>
+            <a href="#"> Life style | </a>
+            <a href="#"> About us | </a>
+            <a href="#"> Contact us</a>
+            <input type="text" placeholder="Search">
         </nav>
     </div>
 </div>
 <div class="container-fluid">
+    <div class="row">
         @foreach($list_obj as $item)
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 20rem; margin: 1rem;">
                 <img class="card-img-top" src="{{$item -> images}}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{$item -> name}}</h5>
@@ -38,6 +40,27 @@
                 </div>
             </div>
         @endforeach
+    </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
 </div>
 
 <!-- Optional JavaScript -->
